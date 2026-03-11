@@ -37,7 +37,8 @@ const Register = () => {
 
     setLoading(true);
     try {
-      const { confirmPassword: _, ...data } = formData;
+      const { confirmPassword: _unused, ...data } = formData;
+      void _unused;
       await register(data);
       navigate('/');
     } catch (err) {
