@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const config = require('./config');
 const connectDB = require('./config/db');
+require('./models'); // Register all Mongoose models
 const routes = require('./routes');
 const { errorHandler } = require('./utils/apiError');
 
